@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="layout">
+       <h1>Sample Form</h1>
+       <form method="post" action="{% url 'saveinquiry' %}">
+        {% csrf_token %}
+        <h2>Name </h2>
+        <input type="text" name="name" placeholder="Name">
+        <div class="container">
+
+            <h2>Gender : </h2>
+
+            <ul>
+                <li>
+                    <input type="radio" id="f-option" name="selector">
+                    <label for="f-option">Male</label>
+
+                    <div class="check"></div>
+                </li>
+
+                <li>
+                    <input type="radio" id="s-option" name="selector">
+                    <label for="s-option">Female</label>
+
+                    <div class="check">
+                        <div class="inside"></div>
+                    </div>
+                </li>
+
+        </div>
+
+        <h2>Division</h2>
+
+        <select name="selectoptions">             
+	        <option >Dhaka</option>
+	        <option >Sylhet</option>
+	        <option >Rajshahi</option>
+	        <option >Chittagong</option>
+	        <option >Khulna</option>
+	        <option >Barishal</option>
+	        <option >Rangpur</option>
+        </select>
+
+
+        <h2>Email Address</h2>
+        <input type="email" name="email" placeholder="example@mail.com">
+        <h2>Joining date</h2>
+        <input type="date" name="joiningdate" >
+        <h2>Course Name</h2>
+        <input type="text" name="course" >
+        <h2>Roll No</h2>
+        <input type="number" name="rollno" >
+        <h2>Course Duration</h2>
+        <input type="text" name="duration" >
+
+        <h1>Attendence data</h1>
+        <h2>date</h2>
+        <input type="date" name="topic_date" >
+
+        <h2>Topic</h2>
+        <input type="text" name="topic">
+        <h2>In time</h2>
+        <input type="time" name="intime">
+        <h2>Out time</h2>
+        <input type="time" name="outtime">
+        
+        <h2>Message</h2>
+        <textarea name="message" id="" cols="50" rows="10" placeholder="Type your message"></textarea>
+        <br> <br>
+        
+        <div class="btn">
+        <button type="submit" name="submit" value="Submit">submit</botton> 
+        </div>
+        <!--        <textarea name="messages" placeholder="Write to me"></textarea>-->
+    </form>
+        <footer>
+        &copy; Manash Mondal, 2017</footer>
+    </div>
+    
+    
+
+</body>
+
+</html>
